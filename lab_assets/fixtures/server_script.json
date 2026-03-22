@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "After Save",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-03-18 16:47:00.216297",
+  "module": "labassets",
+  "name": "status to scrapped in asset",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Unserviceable or Damaged",
+  "script": "if doc.status == \"Approved\" and doc.asset:\n\n    status = frappe.db.get_value(\"Asset\", doc.asset, \"status\")\n\n    if status != \"Scrapped\":\n        frappe.db.set_value(\n            \"Asset\",\n            doc.asset,\n            \"status\",\n            \"Scrapped\",\n            update_modified=False\n        )\n\n        frappe.msgprint(f\"Asset {doc.asset} marked as Scrapped.\")",
+  "script_type": "DocType Event"
+ }
+]

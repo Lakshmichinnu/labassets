@@ -1,0 +1,57 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Asset",
+  "enabled": 1,
+  "modified": "2026-03-18 16:10:44.382023",
+  "module": "labassets",
+  "name": "Unserviceable or Damaged in asset navigation",
+  "script": "frappe.ui.form.on('Asset', {\n    refresh: function(frm) {\n\n        // Remove default Scrap button\n        frm.page.remove_inner_button('Scrap Asset', 'Manage');\n\n        // Add your custom option\n        frm.page.add_inner_button('Mark as Damaged', function() {\n\n            frappe.new_doc('Unserviceable or Damaged', {\n                asset: frm.doc.name,\n                asset_name: frm.doc.asset_name,\n                asset_category: frm.doc.asset_category,\n                \n            });\n\n        }, 'Manage');\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Asset",
+  "enabled": 1,
+  "modified": "2026-03-01 12:24:41.043875",
+  "module": "labassets",
+  "name": "asset_namin_series in asset doctype",
+  "script": "frappe.ui.form.on('Asset', {\n    item_code: function(frm) {\n        if (frm.doc.item_code) {\n            // We reach into the Item record to find the specific series you generated\n            frappe.db.get_value('Item', frm.doc.item_code, 'asset_naming_series', (r) => {\n                if (r && r.asset_naming_series) {\n                    // We set the Asset's standard naming_series field\n                    frm.set_value('naming_series', r.asset_naming_series);\n                }\n            });\n        }\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Item",
+  "enabled": 1,
+  "modified": "2026-03-10 16:31:20.163331",
+  "module": "labassets",
+  "name": "asset naming series in item doctype with admin",
+  "script": "frappe.ui.form.on('Item', {\n    refresh: function(frm) {\n        // 1. Check if the user is an Administrator or has the System Manager role\n        if (frappe.session.user === \"Administrator\" || frappe.user_roles.includes(\"System Manager\")) {\n            \n            // For Admin: Make the field editable and do NOT force a value\n            frm.set_df_property('asset_naming_series', 'read_only', 0);\n            \n        } else {\n            \n            // For Regular Users: Run your original logic\n            if (frm.is_new() || !frm.doc.asset_naming_series) {\n                \n                frappe.db.get_value('Employee', {'user_id': frappe.session.user}, 'custom_lab_name', (r) => {\n                    if (r && r.custom_lab_name) {\n                        const lab_map = {\n                            \"Central Soil Analytical Lab, Parottukonam\": \"TVM\",\n                            \"Soil and Plant Health Clinic, Pathanamthitta\":\"PTA\",\n                            \"Regional Soil Analytical Laboratory Alappuzha\": \"ALP\",\n                            \"Regional Soil Analytical Laboratory Thrissur\": \"TSR\",\n                            \"Regional Soil Analytical Laboratory Kozhikode\": \"KKD\",\n                            \"Soil and Plant Health Clinic, Kasaragod\": \"KSD\",\n                            \"Hi-Tech Soil Analytical Lab WYD\": \"WYD\"\n                        };\n\n                        let short_code = lab_map[r.custom_lab_name];\n                        if (short_code) {\n                            let final_series = \"ASS-\" + short_code + \"-.####\";\n                            frm.set_value('asset_naming_series', final_series);\n                        }\n                    }\n                });\n            }\n            \n            // Lock it for regular users so they can't change their assigned lab code\n            frm.set_df_property('asset_naming_series', 'read_only', 1);\n        }\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Asset",
+  "enabled": 1,
+  "modified": "2026-03-10 17:15:35.272913",
+  "module": "labassets",
+  "name": "itms in the respective login lab",
+  "script": "frappe.ui.form.on('Asset', {\n    onload: function(frm) {\n\n        frappe.db.get_value(\n            \"Employee\",\n            { user_id: frappe.session.user },\n            \"custom_lab_name\",\n            function(r) {\n\n                if (r && r.custom_lab_name) {\n\n                    frm.set_query(\"item_code\", function() {\n                        return {\n                            filters: {\n                                custom_lab: r.custom_lab_name\n                            }\n                        };\n                    });\n\n                }\n\n            }\n        );\n\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Stock Entry",
+  "enabled": 1,
+  "modified": "2026-03-20 11:09:39.152009",
+  "module": "labassets",
+  "name": "hiding button in stock entry",
+  "script": "frappe.ui.form.on('Stock Entry', {\n    onload_post_render: function(frm) {\n\n        // Remove entire \"Create\" dropdown\n        frm.page.clear_inner_toolbar();\n\n        // Remove \"Get Items From\" button\n        frm.page.remove_inner_button(\"Material Request\", \"Get Items From\");\n        frm.page.remove_inner_button(\"Purchase Order\", \"Get Items From\");\n\n    }\n});",
+  "view": "Form"
+ }
+]

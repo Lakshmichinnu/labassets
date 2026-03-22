@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2026-03-18 15:58:25.465363",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "asset",
+  "column_break_tkma",
+  "asset_name",
+  "asset_category",
+  "status",
+  "section_break_kbgr",
+  "description",
+  "proof_of_unserviceable",
+  "column_break_vonu",
+  "brought_forward",
+  "carried_over",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "column_break_tkma",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Data",
+   "label": "Asset Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_kbgr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_vonu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "brought_forward",
+   "fieldtype": "Data",
+   "label": "Brought Forward"
+  },
+  {
+   "fieldname": "carried_over",
+   "fieldtype": "Data",
+   "label": "Carried Over"
+  },
+  {
+   "fieldname": "proof_of_unserviceable",
+   "fieldtype": "Attach",
+   "label": "Proof of Unserviceable"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Unserviceable or Damaged",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Applied\nApproved\nRejected"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "US/.YYYY./.####"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-18 16:44:04.729332",
+ "modified_by": "Administrator",
+ "module": "labassets",
+ "name": "Unserviceable or Damaged",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2026-02-28 15:56:08.611169",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ejcu",
+  "naming_series",
+  "employee",
+  "requester_id",
+  "requester_name",
+  "lab_name",
+  "lab_code",
+  "amended_from",
+  "column_break_ecvq",
+  "date_of_request",
+  "status",
+  "section_break_sdza",
+  "table_zell",
+  "total_indent_amount",
+  "section_break_ripr",
+  "e_office_file_number",
+  "e_office_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ejcu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Purchase Indent",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_request",
+   "fieldtype": "Date",
+   "label": "Date of Request"
+  },
+  {
+   "fetch_from": "requester_id.employee_name",
+   "fieldname": "requester_name",
+   "fieldtype": "Data",
+   "label": "Requester Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ecvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_sdza",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_zell",
+   "fieldtype": "Table",
+   "options": "Material Request Item"
+  },
+  {
+   "fieldname": "section_break_ripr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "e_office_file_number",
+   "fieldtype": "Data",
+   "label": "E_Office File Number"
+  },
+  {
+   "fieldname": "e_office_status",
+   "fieldtype": "Select",
+   "label": "E_Office Status",
+   "options": "\nApplied\nPending SC Review\nRecommended by SC\nDirect Purchase\nPending PSC Approval\nApproved by PSC"
+  },
+  {
+   "fieldname": "total_indent_amount",
+   "fieldtype": "Currency",
+   "label": "Total Indent Amount"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nApplied\nVerified\nDirect Purchased\nRecommended by SC\nApproved",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "requester_id.custom_lab_name",
+   "fieldname": "lab_name",
+   "fieldtype": "Link",
+   "label": "Lab Name",
+   "options": "Soil Laboratory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Indent ID",
+   "options": "PI-.YYYY.-.####."
+  },
+  {
+   "fieldname": "requester_id",
+   "fieldtype": "Link",
+   "label": "Requester ID",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "lab_code",
+   "fieldtype": "Data",
+   "label": "Lab Code"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-11 14:27:20.444152",
+ "modified_by": "Administrator",
+ "module": "labassets",
+ "name": "Purchase Indent",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Senior Chemist",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

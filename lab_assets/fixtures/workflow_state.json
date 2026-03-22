@@ -1,0 +1,290 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2026-01-21 11:28:45.752929",
+  "name": "Pending",
+  "style": "",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2026-01-21 11:28:45.755954",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:45:49.351831",
+  "name": "Tapal Entry Required",
+  "style": "",
+  "workflow_state_name": "Tapal Entry Required"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-10 12:37:20.691920",
+  "name": "SC Review",
+  "style": "",
+  "workflow_state_name": "SC Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-10 12:40:20.745248",
+  "name": "PSC Approval",
+  "style": "",
+  "workflow_state_name": "PSC Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:44:30.255423",
+  "name": "Saved To Origin",
+  "style": "",
+  "workflow_state_name": "Saved To Origin"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-04 15:38:51.675735",
+  "name": "completed",
+  "style": "",
+  "workflow_state_name": "completed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-09 15:17:00.562761",
+  "name": "Pending PSC Approval",
+  "style": "",
+  "workflow_state_name": "Pending PSC Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-10 14:50:18.892268",
+  "name": "Verified",
+  "style": "",
+  "workflow_state_name": "Verified"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-09 11:11:36.492490",
+  "name": "Direct Purchase",
+  "style": "",
+  "workflow_state_name": "Direct Purchase"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-09 11:12:13.642368",
+  "name": "Sent to PSC",
+  "style": "",
+  "workflow_state_name": "Sent to PSC"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-09 12:21:42.745276",
+  "name": "Applied",
+  "style": "",
+  "workflow_state_name": "Applied"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:56:29.278887",
+  "name": "Assign to Research Assistant",
+  "style": "",
+  "workflow_state_name": "Assign to Research Assistant"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-09 11:10:50.673509",
+  "name": "Recommended by SC",
+  "style": "",
+  "workflow_state_name": "Recommended by SC"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-09 11:12:44.012189",
+  "name": "Approved by PSC",
+  "style": "",
+  "workflow_state_name": "Approved by PSC"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-03-09 15:16:34.841028",
+  "name": "Pending SC Review",
+  "style": "",
+  "workflow_state_name": "Pending SC Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:56:44.894514",
+  "name": "Assign to Senior Chemist",
+  "style": "",
+  "workflow_state_name": "Assign to Senior Chemist"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:57:27.531797",
+  "name": "Assign to PSC Officer",
+  "style": "",
+  "workflow_state_name": "Assign to PSC Officer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2026-01-21 11:28:45.754710",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:48:26.189513",
+  "name": "With Director",
+  "style": "",
+  "workflow_state_name": "With Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 23:00:00.778403",
+  "name": "Sent to Report Generation",
+  "style": "",
+  "workflow_state_name": "Sent to Report Generation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-20 10:48:25.640663",
+  "name": "Enter File number",
+  "style": "",
+  "workflow_state_name": "Enter File number"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:59:36.595419",
+  "name": "Accepted By RA",
+  "style": "",
+  "workflow_state_name": "Accepted By RA"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-09 11:32:56.146787",
+  "name": "Save",
+  "style": "",
+  "workflow_state_name": "Save"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:54:55.210574",
+  "name": "With Research Assistant",
+  "style": "",
+  "workflow_state_name": "With Research Assistant"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:54:10.124144",
+  "name": "With PSC Officer",
+  "style": "",
+  "workflow_state_name": "With PSC Officer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:50:19.147335",
+  "name": "File Number Required",
+  "style": "",
+  "workflow_state_name": "File Number Required"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:42:47.614132",
+  "name": "Draft",
+  "style": "",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:58:56.630584",
+  "name": "Returned to Senior Chemist(Overload)",
+  "style": "",
+  "workflow_state_name": "Returned to Senior Chemist(Overload)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:47:40.794136",
+  "name": "With Assistant Director",
+  "style": "",
+  "workflow_state_name": "With Assistant Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:55:48.093392",
+  "name": "Returned to PSC (Overload)",
+  "style": "",
+  "workflow_state_name": "Returned to PSC (Overload)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:46:36.793131",
+  "name": "With Senior Chemist",
+  "style": "",
+  "workflow_state_name": "With Senior Chemist"
+ }
+]
