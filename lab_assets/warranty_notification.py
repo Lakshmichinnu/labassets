@@ -17,7 +17,7 @@ def send_warranty_expiry_notification():
     users = frappe.get_all(
         "Has Role",
         filters={
-            "role": "Senior Chemist",
+            "role": "Labs Asset Dashboard Viewer",
             "parenttype": "User"
         },
         pluck="parent"

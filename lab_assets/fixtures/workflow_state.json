@@ -174,15 +174,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-02-06 22:48:26.189513",
-  "name": "With Director",
-  "style": "",
-  "workflow_state_name": "With Director"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2026-02-06 23:00:00.778403",
   "name": "Sent to Report Generation",
   "style": "",
@@ -246,15 +237,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2026-02-06 22:42:47.614132",
-  "name": "Draft",
-  "style": "",
-  "workflow_state_name": "Draft"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2026-02-06 22:58:56.630584",
   "name": "Returned to Senior Chemist(Overload)",
   "style": "",
@@ -286,5 +268,23 @@
   "name": "With Senior Chemist",
   "style": "",
   "workflow_state_name": "With Senior Chemist"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:48:26.189513",
+  "name": "With Director",
+  "style": "",
+  "workflow_state_name": "With Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-02-06 22:42:47.614132",
+  "name": "Draft",
+  "style": "",
+  "workflow_state_name": "Draft"
  }
 ]

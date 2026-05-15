@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
+  "dt": "Purchase Receipt",
+  "enabled": 1,
+  "modified": "2026-03-26 15:46:38.008984",
+  "module": "labassets",
+  "name": "hide purchase receipt create button inner options",
+  "script": "frappe.ui.form.on('Purchase Receipt', {\n    refresh: function(frm) {\n\n        // Delay to wait until buttons are rendered\n        setTimeout(() => {\n\n            frm.page.remove_inner_button(\"Purchase Invoice\", \"Create\");\n            frm.page.remove_inner_button(\"Landed Cost Voucher\", \"Create\");\n            frm.page.remove_inner_button(\"Retention Stock Entry\", \"Create\");\n\n        }, 300);\n\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
   "dt": "Asset",
   "enabled": 1,
   "modified": "2026-03-18 16:10:44.382023",

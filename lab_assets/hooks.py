@@ -26,7 +26,9 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/lab_assets/css/lab_assets.css"
+#app_include_css = "/assets/lab_assets/css/custom.css"
 # app_include_js = "/assets/lab_assets/js/lab_assets.js"
+#app_include_js = "/assets/lab_assets/js/workspace_filters.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/lab_assets/css/lab_assets.css"
@@ -45,6 +47,9 @@ app_license = "mit"
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {
+    "Item": "public/js/item_list.js"
+}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -255,14 +260,18 @@ scheduler_events = {
 
 fixtures = [
 
-    # Custom Fields
+    # =====================================================
+    # CUSTOM FIELD
+    # =====================================================
+
     {
-        "doctype": "Custom Field",
+        "dt": "Custom Field",
         "filters": [
             [
                 "name",
                 "in",
                 [
+
                     "Item-custom_lab",
 
                     "Asset-custom_register_page_number",
@@ -279,7 +288,8 @@ fixtures = [
                     "Asset-custom_brought_forward",
                     "Asset-custom_carry_over",
                     "Asset-custom_invoice_details",
-                    
+                    "Asset-custom_amc_status",
+                    "Asset-custom_warranty_status",
 
                     "Purchase Receipt-custom_page_number_of_register",
                     "Purchase Receipt-custom_purchase_invoice_number",
@@ -287,8 +297,12 @@ fixtures = [
                     "Purchase Receipt-custom_plan_fund",
                     "Purchase Receipt-custom_purchased_date",
                     "Purchase Receipt-custom_purchase_through",
-                    "Purchase Indent-workflow_state"
+                    "Purchase Indent-workflow_state",
+                    "Purchase Receipt-custom_register_name",
+                    "Purchase Receipt-custom_invoice",
+                    "Purchase Receipt Item-custom_is_stock_item",
 
+                    "Stock Entry-custom_register_name",
                     "Stock Entry-custom_register_page",
                     "Stock Entry-custom_register_volume",
                     "Stock Entry-custom_section_break_fcfqk",
@@ -297,65 +311,153 @@ fixtures = [
                     "Stock Entry-custom_brought_forward",
                     "Stock Entry-custom_received_from",
                     "Stock Entry-custom_issued_employee_name",
-
+                    "Stock Entry-custom_is_broken_item_entry",
+                    "Stock Entry-custom_remarks_for_issuing",
 
 
                     "Asset Maintenance-custom_register_page_",
                     "Asset Maintenance-custom_register_volume",
                     "Asset Maintenance-custom_section_break_ejq4u",
-                    "Asset Maintenance-custom_maintenance_team_name",
-
+                    
 
                 ]
             ]
         ]
     },
 
-    # Client Scripts
+    # =====================================================
+    # CLIENT SCRIPT
+    # =====================================================
+
     {
-        "doctype": "Client Script",
+        "dt": "Client Script",
         "filters": [
             [
                 "name",
                 "in",
                 [
-                    "asset naming series in item doctype with admin",
+
                     "asset_namin_series in asset doctype",
                     "itms in the respective login lab",
                     "Unserviceable or Damaged in asset navigation",
-                    "hiding button in stock entry"
+                    "hiding button in stock entry",
+                    "asset naming series in item doctype with admin",
+                    "hide purchase receipt create button inner options",
+                    "hiding button in stock entry",
+
 
                 ]
             ]
         ]
     },
 
-    # Workflow
-    {
-    "doctype": "Workflow",
-    "filters": [["name", "in", ["purchase indent", "Unserviceable"]]]
-    },
-    #Property Setter
+    # =====================================================
+    # WORKFLOW
+    # =====================================================
 
     {
-        "doctype": "Property Setter"
-    },
-
-    #server scripts
-    {
-        "doctype": "Server Script",
+        "dt": "Workflow",
         "filters": [
             [
                 "name",
-                "=",
-                "status to scrapped in asset"
+                "in",
+                [
+                    "purchase indent",
+                    "Unserviceable"
+                ]
             ]
         ]
-     },
-     #Workflow state
-      {
-        "doctype": "Workflow State"
-    }
+    },
 
+    # =====================================================
+    # PROPERTY SETTER
+    # =====================================================
 
+    {
+        "dt": "Property Setter"
+    },
+
+    # =====================================================
+    # SERVER SCRIPT
+    # =====================================================
+
+    {
+        "dt": "Server Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "status to scrapped in asset",
+                    "Restore Asset from scrap when req delete",
+                    "Automatic status update for AMC and Warranty"
+                ]
+            ]
+        ]
+    },
+
+    # =====================================================
+    # WORKFLOW STATE
+    # =====================================================
+
+    {
+        "dt": "Workflow State"
+    },
+
+    # =====================================================
+    # WORKSPACE
+    # =====================================================
+
+    {
+        "dt": "Workspace",
+        "filters": [
+            [
+                "module",
+                "=",
+                "labassets"
+            ]
+        ]
+    },
+
+    # =====================================================
+    # CUSTOM HTML BLOCK
+    # =====================================================
+
+    {
+        "dt": "Custom HTML Block",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    
+                    "Asset Creation_Lab wise",
+                    "Employewise_stock_dashboard",
+                    "Stock operation_employee",
+                    "Stock Purchase Trends",
+                    "Lab-wise Asset Category Distribution",
+                    "financial year selection",
+                    "both employee_asset and chart",
+                    "Stock Management Overview"
+                ]
+            ]
+        ]
+    },
+
+    # =====================================================
+    # DASHBOARD CHART
+    # =====================================================
+
+    {
+        "dt": "Dashboard Chart",
+        "filters": [
+            [
+                "module",
+                "=",
+                "labassets"
+            ]
+        ]
+    },
+
+   
 ]

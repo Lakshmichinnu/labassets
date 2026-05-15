@@ -1,0 +1,42 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"nElbmfvgqq\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Stock Management Overview\",\"col\":12}},{\"id\":\"bv-sKoiiZr\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Stock Purchase Trends\",\"col\":12}}]",
+ "creation": "2026-05-09 21:49:10.550304",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Stock Management Overview",
+   "label": "Stock Management Overview"
+  },
+  {
+   "custom_block_name": "Stock Purchase Trends",
+   "label": "Stock Purchase Trends"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Stock_Management",
+ "links": [],
+ "modified": "2026-05-14 15:38:45.274172",
+ "modified_by": "Administrator",
+ "module": "labassets",
+ "name": "Stock_Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Asset & Stock Manager L2"
+  }
+ ],
+ "sequence_id": 42.0,
+ "shortcuts": [],
+ "title": "Stock_Management"
+}

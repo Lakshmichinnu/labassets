@@ -1,0 +1,8 @@
+.grid-report .widget-head .widget-control-btns .btn[title="Filter"],
+.grid-report .widget-head .widget-control-btns .btn[aria-label="Filter"],
+.widget .widget-head .widget-control-btns .btn[title="Filter"],
+.widget .widget-head .widget-control-btns .btn[aria-label="Filter"],
+.widget .widget-head .widget-control-btns .btn:has(svg use[*|href*="filter"]),
+.widget .widget-head .widget-control-btns .btn:has(.es-icon-filter) {
+    display: none !important;
+}

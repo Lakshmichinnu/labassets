@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": null,
- "modified": "2026-03-10 11:28:25.046023",
+ "modified": "2026-03-27 08:38:03.516502",
  "modified_by": "Administrator",
  "module": "labassets",
  "name": "Lab Wise Asset Value",
@@ -22,6 +22,9 @@
  "roles": [
   {
    "role": "PSC Officer"
+  },
+  {
+   "role": "Senior Chemist"
   }
  ],
  "timeout": 0

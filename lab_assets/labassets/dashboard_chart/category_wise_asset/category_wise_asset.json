@@ -14,14 +14,18 @@
  "idx": 0,
  "is_public": 1,
  "is_standard": 1,
- "modified": "2026-03-10 11:15:07.167438",
+ "modified": "2026-03-26 21:20:16.736880",
  "modified_by": "Administrator",
  "module": "labassets",
  "name": "Category wise Asset",
  "number_of_groups": 0,
  "owner": "Administrator",
  "parent_document_type": "",
- "roles": [],
+ "roles": [
+  {
+   "role": "Research Assistant"
+  }
+ ],
  "show_values_over_chart": 0,
  "source": "",
  "time_interval": "Yearly",

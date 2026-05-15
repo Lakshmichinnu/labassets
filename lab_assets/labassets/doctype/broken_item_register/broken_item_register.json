@@ -9,6 +9,7 @@
   "naming_series",
   "item_name",
   "quantity_broken",
+  "remarks",
   "column_break_mwpp",
   "broken_date",
   "lab_location",
@@ -31,6 +32,8 @@
   {
    "fieldname": "item_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Item Name",
    "link_filters": "[[\"Item\",\"is_stock_item\",\"=\",1]]",
    "options": "Item"
@@ -44,6 +47,7 @@
   {
    "fieldname": "quantity_broken",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Quantity Broken"
   },
   {
@@ -89,8 +93,10 @@
   {
    "fieldname": "stock_entry_linkage",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Stock entry linkage",
-   "options": "Stock Entry"
+   "options": "Stock Entry",
+   "read_only": 1
   },
   {
    "fieldname": "amended_from",
@@ -101,13 +107,23 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-03-18 11:21:27.287781",
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "stock_entry_type"
+  }
+ ],
+ "modified": "2026-04-13 17:01:04.634595",
  "modified_by": "Administrator",
  "module": "labassets",
  "name": "Broken Item Register",

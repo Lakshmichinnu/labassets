@@ -1,0 +1,45 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"PciQp_JabV\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"both employee_asset and chart\",\"col\":12}},{\"id\":\"TqTXFIA24C\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Asset Creation_Lab wise\",\"col\":12}}]",
+ "creation": "2026-05-11 17:20:21.316665",
+ "custom_blocks": [
+  {
+   "custom_block_name": "both employee_asset and chart",
+   "label": "both employee_asset and chart"
+  },
+  {
+   "custom_block_name": "Asset Creation_Lab wise",
+   "label": "Asset Creation_Lab wise"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "assets",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Assets_Management",
+ "links": [],
+ "modified": "2026-05-13 12:22:24.609137",
+ "modified_by": "Administrator",
+ "module": "labassets",
+ "name": "Assets_Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Lab-wise Asset Dashboard Viewer"
+  },
+  {
+   "role": "Labs Asset Dashboard Viewer"
+  }
+ ],
+ "sequence_id": 40.0,
+ "shortcuts": [],
+ "title": "Assets_Management"
+}

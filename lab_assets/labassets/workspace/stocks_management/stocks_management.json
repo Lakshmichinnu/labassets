@@ -1,0 +1,42 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Zx9eEczc3G\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Employewise_stock_dashboard\",\"col\":12}},{\"id\":\"R8nySiSXuC\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Stock operation_employee\",\"col\":12}}]",
+ "creation": "2026-05-11 10:38:11.057708",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Employewise_stock_dashboard",
+   "label": "Employewise_stock_dashboard"
+  },
+  {
+   "custom_block_name": "Stock operation_employee",
+   "label": "Stock operation_employee"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "stock",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Stocks_Management",
+ "links": [],
+ "modified": "2026-05-13 12:22:24.703295",
+ "modified_by": "Administrator",
+ "module": "labassets",
+ "name": "Stocks_Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Lab-wise Stock Dashboard Viewer"
+  }
+ ],
+ "sequence_id": 43.0,
+ "shortcuts": [],
+ "title": "Stocks_Management"
+}

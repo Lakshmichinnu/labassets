@@ -13,9 +13,9 @@
  "group_by_based_on": "location",
  "group_by_type": "Sum",
  "idx": 0,
- "is_public": 0,
+ "is_public": 1,
  "is_standard": 1,
- "modified": "2026-03-10 11:19:36.285820",
+ "modified": "2026-03-26 21:25:58.917699",
  "modified_by": "Administrator",
  "module": "labassets",
  "name": "Lab wise Asset Value",
@@ -25,6 +25,9 @@
  "roles": [
   {
    "role": "PSC Officer"
+  },
+  {
+   "role": "Research Assistant"
   }
  ],
  "show_values_over_chart": 1,
